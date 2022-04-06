@@ -1,0 +1,61 @@
+.board { 
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 700px;
+    border: 20px solid #FFF8DC;
+    border-collapse: separate;
+    border-radius: 6px;
+}
+td img{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    margin-bottom: auto;
+}
+tr :first-child{
+    text-align: start;
+    vertical-align: top;
+}
+.white{
+    width: 80px;
+    height: 80px;
+    background: #FFF8DC;
+}
+.dark{
+    width: 80px;
+    height: 80px;
+    background: #6e849b;
+}
+body{
+    background: linear-gradient(#4c6680, #FFF8DC);
+    background-repeat: no-repeat;
+    background-attachment: local scroll;
+}
+td span{
+    display: block;
+    font-size: 12.5px;
+    margin-bottom: 0;
+}
+    .firstRow div{
+    font-size: 12.5px;
+    text-align: end;
+    }
+    .firstRow td{
+        vertical-align: bottom;
+    }
+a:link{
+    color: #000000;
+    text-decoration: none;
+}
+a:visited{
+    color: #000000;
+    text-decoration: none;
+}
+a:hover{
+    color: #8d8d8d;
+    text-decoration: none;
+}
+.firstRow td .number{
+    float: left;
+}
