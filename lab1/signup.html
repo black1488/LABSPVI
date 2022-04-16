@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+</head>
+<body>
+    <form class="Registration">
+        <section class="newlogin">
+            <label for="newLogin">Login:</label>
+            <br>
+            <input type="text" id = "newLogin" name="newLogin" required>
+            <br>
+        </section>
+        <section class="newEmail">
+            <label for="newEmail">Email:</label>
+            <br>
+            <input type="email" id = "newEmail" name="newEmail" required>
+            <br>
+        </section>
+        <section class="password">
+            <label for="password">Password:</label>
+            <br>
+            <input type="password" id="newpassword" onChange="checkingPswrd()" required>
+            <br>
+        </section>
+        <section class="confirm">
+            <label for="confirm">Retype password:</label>
+            <br>
+            <input type="password" id="confirm" onchange="checkingPswrd()" required>
+            <br>
+        </section>
+        <section class="sex">
+            <br>
+            <label>Your sex</label><br>
+            <input type="radio" name="sex" value="male" checked>
+            <label for="male">Male</label>
+            <input type="radio" name="sex" value="female">
+            <label for="female">Female</label>
+            <input type="radio" name="sex" value="other">
+            <label for="other">other</label>
+        </section>
+        <section class="level">
+            <br>
+            <label>Your rating</label>
+            <select name="level" id="level">
+                <option value="0">Below 1200</option>
+                <option value="1200">1200-2000</option>
+                <option value="2000">2000-2400</option>
+                <option value="2400">2400-2700</option>
+                <option value="2700">2700+</option>
+            </select>
+        </section>                    
+        </section>
+        <section class="aboutme">
+            <label for="aboutme">Write something about your chess career (optional)</label>
+            <br>
+            <textarea name="aboutme" rows="20" cols="30"></textarea>
+        </section>
+        <br>
+        <section class="EULA">
+            <input type="checkbox" id="eula" name="eula" required>
+            <label for="eula">I have read <a href="./eula.html" target="_blank">licence agreement</a> for registering on site</label>
+        </section>                    
+        <section class="hidden">
+            <input type="hidden" id="formId" value="1">
+        </section>
+        <section class="submission">
+            <br>
+            <input type="submit" id="newsubmit" value="Sign up">
+        </section>
+        <section class="reset">
+            <input type="reset" id="reset" value="Reset">
+
+    </form>
+    <script src="./script.js"></script>
+</body>
+</html>

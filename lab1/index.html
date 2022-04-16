@@ -4,6 +4,7 @@
         <title>Super duper html programmer 228</title>
         <meta charset="UTF-8"> 
         <link rel="stylesheet" type="text/css" href="./style.css"/>
+        
     </head>
     <body>
         <header>
@@ -15,26 +16,29 @@
             </ul>
         </header>
         <main>
-            <br>
+            <br>                
+            <h2>New to this site? <a href="./signup.html">Sign up</a></h2>
             <div class="auth">
                 <h2>Authorization</h2>
-                <section class="login">
-                    <label for="Login">Login</label>
+                <form class="Authorization">
+                    <section class="login">
+                        <label for="Login">Login</label>
+                        <br>
+                        <input type="text" id = "Login" name="Login" required>
+                        <br>
+                    </section>
+                    <section class="password">
+                        <label for="password">Password</label>
+                        <br>
+                        <input type="password" id="password"required>
+                        <br>
+                    </section>
+                    <section class="submission">
+                        <input type="submit" value="Submit">
+                    </section>
                     <br>
-                    <input type="text" id = "Login" required>
-                    <br>
-                </section>
-                <section class="password">
-                    <label for="password">Password</label>
-                    <br>
-                    <input type="password" id="password"required>
-                    <br>
-                </section>
-                <section class="submission">
-                    <input type="submit" value="Authorize">
-                    <br>
+                </form>
 
-                </section>
             </div>
             <div id="chessboard">
                 <table class="chessboard">
@@ -297,6 +301,8 @@
         <footer>
             <p>Horodok smotra <em>hookahs</em> <strong><br>+380 67 987 0301</strong></p>
             <img src="2203655151_kalyan-alpha-hookah.jpg" width="60" height="60">
+            <button id="submitButton">CallMaksosya</button>
         </footer>
+        <script src="./script.js"></script>
     </body>
 </html>
