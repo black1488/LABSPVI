@@ -1,3 +1,4 @@
+
 const submit = document.getElementById("submitButton");
 submit.addEventListener("click", function(){
     alert("New hookah shop have opened!");
@@ -12,4 +13,14 @@ function checkingPswrd(){
     else{
         confirm.setCustomValidity('Password doesn`t match');
     }
+}
+function saveRegistered() {
+    var registeredLogins = [];
+    var registeredEmail = [];
+    var login = document.querySelector('#newLogin').value;
+    var email = document.querySelector('#newEmail').value;
+    registeredLogins.push(login);
+    registeredEmail.push(email);
+    alert("New user registered\n\n" +"Login: " + login+ "\nEmail: "+ email);
+    return true;
 }

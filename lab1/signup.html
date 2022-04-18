@@ -8,31 +8,36 @@
     <title>Sign up</title>
 </head>
 <body>
-    <form class="Registration" method="post" action="./index.html">
+    <div class="block">
+    <form class="Registration" action="./index.html" onsubmit="saveRegistered()">
+        <div class="title">
+            <h2>Sign up</h2>
+        </div>
+        <div class="info">
         <section class="newlogin">
-            <label for="newLogin">Login:</label>
             <br>
-            <input type="text" id = "newLogin" name="newLogin" required>
+            <input type="text" id = "newLogin" name="newLogin" required minlength="5" maxlength="15" pattern="[a-zA-Z0-9]+" placeholder="Login">
             <br>
         </section>
+
         <section class="newEmail">
-            <label for="newEmail">Email:</label>
             <br>
-            <input type="email" id = "newEmail" name="newEmail" required>
+            <input type="email" id = "newEmail" name="newEmail" required placeholder="Email">
             <br>
         </section>
+
         <section class="password">
-            <label for="password">Password:</label>
             <br>
-            <input type="password" id="newpassword" onchange="checkingPswrd()" required>
+            <input type="password" id="newpassword" onchange="checkingPswrd()" required minlength="8" maxlength="15" placeholder="Create password">
             <br>
         </section>
+
         <section class="confirm">
-            <label for="confirm">Retype password:</label>
             <br>
-            <input type="password" id="confirm" onchange="checkingPswrd()" required>
+            <input type="password" id="confirm" onchange="checkingPswrd()" required placeholder="Retype password">
             <br>
         </section>
+
         <section class="sex">
             <br>
             <label>Your sex</label><br>
@@ -42,7 +47,9 @@
             <label for="female">Female</label>
             <input type="radio" name="sex" value="other">
             <label for="other">other</label>
+            <br>
         </section>
+
         <section class="level">
             <br>
             <label>Your rating</label>
@@ -53,29 +60,36 @@
                 <option value="2400">2400-2700</option>
                 <option value="2700">2700+</option>
             </select>
-        </section>                    
         </section>
+
         <section class="aboutme">
-            <label for="aboutme">Write something about your chess career (optional)</label>
             <br>
-            <textarea name="aboutme" rows="20" cols="30"></textarea>
+            <textarea name="aboutme" rows="10" cols="45" placeholder="Write something about your chess career (optional)"></textarea>
         </section>
+
         <br>
         <section class="EULA">
             <input type="checkbox" id="eula" name="eula" required>
-            <label for="eula">I have read <a href="./eula.html" target="_blank">licence agreement</a> for registering on site</label>
-        </section>                    
+            <label for="eula">I have read <a href="./eula.html" target="_blank"><strong>licence agreement</strong></a> for registering on site</label>
+        </section>  
+
         <section class="hidden">
             <input type="hidden" id="formId" value="1">
         </section>
+        </div>
         <section class="submission">
             <br>
-            <input type="submit" id="newsubmit" value="Sign up">
+            <button class="superbutton" type="submit" id="newsubmit"><span>Sigh up</span></button>
+            <br>
         </section>
-        <section class="reset">
-            <input type="reset" id="reset" value="Reset">
 
+        <section class="reset">
+            <button class="superbutton" type="reset" id="reset"><span>Reset</span></button>
+        </section>
+        
     </form>
+    </div>
     <script src="./script.js"></script>
+
 </body>
 </html>
