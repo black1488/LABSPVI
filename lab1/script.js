@@ -24,3 +24,9 @@ function saveRegistered() {
     alert("New user registered\n\n" +"Login: " + login+ "\nEmail: "+ email);
     return true;
 }
+function fakeAuth(){
+    alert('Authorization succesful!');
+    const element = document.getElementById("auth");
+    element.remove();
+    return true;
+}

@@ -17,17 +17,17 @@
         </header>
         <main>
             <br>                
-            <h2>New to this site? <a href="./signup.html"><strong>Sign up</strong></a></h2>
-            <div class="auth">
+            <h2 id="signupheader">New to this site? <a href="./signup.html"><strong>Sign up</strong></a></h2>
+            <div class="auth" id="auth">
                 <h2>Authorization</h2>
-                <form class="Authorization">
+                <form class="Authorization" onsubmit="fakeAuth()">
                     <section class="login">
-                        <input type="text" id = "Login" name="Login" required placeholder="Login">
+                        <input type="text" id = "Login" name="Login" required placeholder="Login" minlength="5" maxlength="15" pattern="[a-zA-Z0-9]+">
                         <br>
                     </section>
                     <section class="password">
                         <br>
-                        <input type="password" id="password" required placeholder="Password">
+                        <input type="password" id="password" required placeholder="Password" minlength="8" maxlength="15">
                         <br>
                     </section>
                     <section class="submission">
