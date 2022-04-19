@@ -25,7 +25,7 @@ function saveRegistered() {
     return true;
 }
 function fakeAuth(){
-    alert('Authorization succesful!');
+    alert('Authorization successful!');
     const element = document.getElementById("auth");
     element.remove();
     return true;
