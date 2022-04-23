@@ -21,7 +21,7 @@ function saveRegistered() {
     var email = document.querySelector('#newEmail').value;
     registeredLogins.push(login);
     registeredEmail.push(email);
-    alert("New user registered\n\n" +"Login: " + login+ "\nEmail: "+ email);
+    alert("New user registered\n\n" +"Login: " + registeredLogins + "\nEmail: "+ registeredEmail);
     return true;
 }
 function fakeAuth(){
