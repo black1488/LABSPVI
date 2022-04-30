@@ -1,4 +1,3 @@
-
 const submit = document.getElementById("submitButton");
 submit.addEventListener("click", function(){
     alert("New hookah shop have opened!");
@@ -30,3 +29,4 @@ function fakeAuth(){
     element.remove();
     return true;
 }
+ 

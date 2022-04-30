@@ -128,3 +128,13 @@ h2 {
     position: relative;
     top:0%;
 }
+#timer{
+    margin: auto;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#controls button{
+    margin: auto;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
