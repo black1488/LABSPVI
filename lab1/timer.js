@@ -1,10 +1,10 @@
-let hours = 0;
-let mins = 0;
+
+let mins = 1;
 let seconds = 0;
 var start = document.querySelector("#start");
 var stopper = document.querySelector("#stop");
 var reset = document.querySelector("#reset");
-var texthours = document.querySelector("#hours");
+
 var textminutes = document.querySelector("#mins");
 var textseconds = document.querySelector("#seconds");
 
@@ -16,32 +16,26 @@ function startTimer()
 {
   timex = setTimeout(function()
   {
-    seconds++;
-    if(seconds > 59)
+    seconds--;
+    if (seconds < 0 && mins == 0) {
+        alert('timeout');
+        stopCounter();
+        return 0;
+    }
+    if(seconds < 0)
     {
-        seconds = 0; mins++;
-        if(mins>59) 
+        seconds = 59; mins--;
+        if(mins<0) 
         {
-            mins=0;hours++;
-            if(hours <10)
-            {
-                texthours.textContent=`0${hours}:`;
-            } else texthours.textContent=`${hours}:`;
-        }                
-        if(mins<10)
-        {                     
-            textminutes.textContent=`0${mins}:`;
-        }else textminutes.textContent=`${hours}:`;
-    }    
-    if(seconds <10) 
-    {
-      textseconds.textContent=`0${seconds}`;
-    }else textseconds.textContent=`${seconds}`;
-
+            mins=0;
+        }else {textminutes.textContent=`0${mins}:`;textseconds.textContent=`${seconds}`;}            
+    }else {textminutes.textContent=`0${mins}:`;textseconds.textContent=`${seconds}`;}
+    if (seconds<10) {
+        textseconds.textContent=`0${seconds}`;
+    }
     startTimer();
   },1000);
 }
-
 function startCounter(){
       startTimer();
 };
@@ -51,6 +45,6 @@ function stopCounter(){
 };
 
 function resetCounter(){
-      hours =0; mins =0; seconds =0;
-  texthours.textContent='00:'; textminutes.textContent='00:'; textseconds.textContent='00';
+      hours =0; mins =1; seconds =0;
+       textminutes.textContent='01:'; textseconds.textContent='00';
 };
