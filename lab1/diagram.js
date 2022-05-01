@@ -11,6 +11,7 @@ function createDiagram() {
     var bp =0;
     var bq =0;
     var br =0;
+    //навчитися зчитувати дані
     var table = document.getElementById("table");
     for (var i = 0, row; row=table.rows[i]; i++) {
         for (var j = 0, col;  col = row.cells[j]; j++) {
