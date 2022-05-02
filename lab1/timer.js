@@ -45,6 +45,6 @@ function stopCounter(){
 };
 
 function resetCounter(){
-      hours =0; mins =1; seconds =0;
-       textminutes.textContent='01:'; textseconds.textContent='00';
+        mins =1; seconds =0;
+        textminutes.textContent='01:'; textseconds.textContent='00';
 };
